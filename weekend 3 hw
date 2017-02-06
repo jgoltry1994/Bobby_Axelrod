@@ -9,7 +9,7 @@ def insertion_sort(my_list):
 			if value < my_list[i]: # value indicates the elements of the list
 				my_list[i+1] = my_list[i] #shift number i to right in i+1 
 				my_list[i] = value #shift value left into slot i 
-				i = i - 1 #compare value to something 1 lower
+				i = i - 1 #compare value to something 1 lower (decrement)
 			else: 
 				break
 
