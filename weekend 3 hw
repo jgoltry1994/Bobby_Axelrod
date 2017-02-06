@@ -1,14 +1,14 @@
 Insertion sort is a sorting algorithm that builds the final sorted() list one item at a time. 
 
 
-def insertion_sort(l): 
-	for idx in range(1, len(l)): 
-		value = l[idx] #the item in the list at each of the indexes that we use to compare all the items to the left
+def insertion_sort(my_list): 
+	for idx in range(1, len(my_list)): 
+		value = my_list[idx] #the item in the list at each of the indexes that we use to compare all the items to the left
 		i = idx - 1 #i should have one lower than the index 
 		while i>=0: # keep pushing i further and further to the left
-			if value < l[i]: # value indicates the elements of the list
-				l[i+1] = l[i] #shift number i to right in i+1 
-				l[i] = value #shift value left into slot i 
+			if value < my_list[i]: # value indicates the elements of the list
+				my_list[i+1] = my_list[i] #shift number i to right in i+1 
+				my_list[i] = value #shift value left into slot i 
 				i = i - 1
 			else: 
 				break
