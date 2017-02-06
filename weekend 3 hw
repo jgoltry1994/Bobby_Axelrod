@@ -11,7 +11,7 @@ def insertion_sort(my_list):
 				my_list[i] = value #shift value left into slot i 
 				i = i - 1 #compare value to something 1 lower (decrement)
 			else: 
-				break
+				break #don't have to shift items anymore to left or right
 
 list = [6, 8, 1, 4, 5, 7]
 insertion_sort(list) 
