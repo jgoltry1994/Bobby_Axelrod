@@ -1,0 +1,24 @@
+JOINS are used to combine rows from two or more tables based on a common field between them
+
+There are INNER, LEFT, RIGHT, AND FULL JOINS: 
+
+Since we're using JOIN, we have to specify the table and columns
+
+INNER JOIN returns all rows when theres at least 1 match in both table
+
+SELECT customers.firstname, customers.lastname, orders.orderNum
+FROM customers INNER JOIN orders ON customers.id = orders.customerId ORDER BY customers.lastname;
+
+LEFT JOIN returns rows from the left table with the matching rows on the right table
+
+SELECT customers.firstname, customers.lastname, orders.orderNum, orders.orderDate FROM customers LEFT JOIN 
+orders ON customer.id = orders.customerId ORDER BY customer.lastname;
+
+RIGHT JOIN returns rows from the right table with the matching rows of the left table
+
+SELECT orders.orderNum, customers.firstname, customers.lastname FROM orders RIGHT join customers ON orders.customerId 
+= customer.id ORDER BY orders.orderNUM;
+
+FULL JOIN returns all rows from the left table and the right table. It combines the result of both left and right rows. 
+
+SELECT * FROM customers FULL JOIN orders ON customers.lastname = orders.orderNum;
